@@ -9,13 +9,13 @@ package Test;
  *
  * @author xaviiorichi
  */
-public class Opcion {
+public class Pregunta {
     String titulo;
-    boolean correcta;
-    public Opcion( String x,boolean y){
-    System.out.println("Se inicializa el constructor");
-    titulo=x;
-    correcta=true;
+    Opcion[] opciones;
+    public Pregunta(String x, Opcion[] y){
+        titulo=x;
+        opciones=y;
+        
     }
     
 }
