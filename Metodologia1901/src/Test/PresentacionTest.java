@@ -151,16 +151,19 @@ public class PresentacionTest extends javax.swing.JFrame {
     private void checarRespuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checarRespuestaActionPerformed
       
        //Buscamos el radioButton seleccionado
-       int indiceSelecionado=0;
+       int indiceSeleccionado = 0;
+       
        for(int i=0;i<radios.length;i++){
            if(radios[i].isSelected()){
-               indiceSelecionado=i;
+               indiceSeleccionado=i;
+               break;
            }
        }
          // TODO add your handling code here:
-       JOptionPane.showConfirmDialog(this,""+evaluar(p1,radios[indiceSelecionado]));
+        System.out.println("El indice Seleccioando es:" + indiceSeleccionado);
+        JOptionPane.showInternalConfirmDialog(this,"" + evaluar (p1,indiceSeleccionado));
     }//GEN-LAST:event_checarRespuestaActionPerformed
-
+      
     /**
      * @param args the command line arguments
      */
@@ -207,21 +210,13 @@ public class PresentacionTest extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioOp5;
     // End of variables declaration//GEN-END:variables
 
-public boolean ecaluar(Pregunta p,JRadioButton r){
-boolean correcta=false;
+public boolean evaluar (Pregunta p, int indiceSeleccioando){ 
 
-
-for(int i=0;i<p.opciones.length;i++){
-    if(opciones[i].titulo.equals(r.getText()))
-        correcta=true;
-    break;
+    boolean correcta = false;
+    
+if(p.opciones[indiceSeleccioando].correcta){
+    correcta=true;
 }
-
-
-return correcta;
+return correcta ;
 }
-
-    private String evaluar(Pregunta p1, JRadioButton radio) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
