@@ -11,7 +11,7 @@ package Test;
  */
 public class probartodo {
     public static void main(String[] args) {
-        Opcion op1=new Opcion("El azucar y la harina",true);
+        Opcion op1=new Opcion("El azucar",true);
        // System.out.println("tu titulo es "+op1.titulo);
        // System.out.println("Es correcta "+op1.correcta);
         

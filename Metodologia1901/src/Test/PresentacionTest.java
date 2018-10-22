@@ -161,7 +161,9 @@ public class PresentacionTest extends javax.swing.JFrame {
        }
          // TODO add your handling code here:
         System.out.println("El indice Seleccioando es:" + indiceSeleccionado);
-        JOptionPane.showInternalConfirmDialog(this,"" + evaluar (p1,indiceSeleccionado));
+        
+        JOptionPane.showConfirmDialog(this,""+evaluar(p1,indiceSeleccionado));
+        //JOptionPane.showInternalConfirmDialog(this,"" + evaluar (p1,indiceSeleccionado));
     }//GEN-LAST:event_checarRespuestaActionPerformed
       
     /**
