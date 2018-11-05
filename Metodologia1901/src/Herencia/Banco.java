@@ -10,16 +10,49 @@ package Herencia;
  * @author xaviiorichi
  */
 public class Banco {
-    public static void main(String[] args){
-        //primero creamos la tarjeta de credito
-        TarjetaCredito t1=new TarjetaCredito();
-        //le asignamos un numero
-        t1.setNumero(12345);
-        TarjetaAhorro t2=new TarjetaAhorro();
-       /* t2.setNumero(2345);
-        TarjetaNomina t3=new TarjetaNomina();
-        t3.setNumero(5678);
-        */
-      System.out.println("El numero de la tarjeta t3 es "+t1.getNumero());
-    }
+ public static void main(String[] args){
+     
+ TarjetaCredito tcredito=new TarjetaCredito();
+ tcredito.setNumero(1234);
+ tcredito.setNombre("banamex");
+ tcredito.setTipo("credito");
+tcredito.setSaldo(100);
+ 
+ 
+ TarjetaAhorro tahorro=new TarjetaAhorro();
+ tahorro.setNumero(2345);
+ tahorro.setNombre("bancomer");
+ tahorro.setTipo("ahorro");
+tahorro.setSaldo(100);
+
+ TarjetaNomina tnomina=new TarjetaNomina();
+ tnomina.setNumero(3456);
+ tnomina.setNombre("hsbc");
+ tnomina.setTipo("nomina");
+ tnomina.setSaldo(100);
+ 
+ 
+ //gemeramos el codigo del deposito 
+ //vamos hacerlo de la forma mas basica 
+ 
+  tcredito.pagar(150);
+  tnomina.pagar(150);
+  tahorro.pagar(150);
+  
+  //generar arreglo de tarjetas 
+  
+  Tarjeta tarjetas[]=new Tarjeta[3];
+  
+  tarjetas[0]=tnomina;
+  tarjetas[1]=tcredito;
+  tarjetas[2]=tahorro;
+  
+  //iteramos el areglo
+  
+  for(Tarjeta t: tarjetas){
+      System.out.println("Saldo es: "+t.getSaldo());
+  }
+ 
+ }
+ 
 }

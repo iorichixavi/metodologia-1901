@@ -5,26 +5,11 @@
  */
 package Herencia;
 
-/**
- *
- * @author xaviiorichi
- */
-public class TarjetaCredito {
-    
-     private int numero;
+public class TarjetaCredito extends Tarjeta {
 
-    /**
-     * @return the numero
-     */
-    public int getNumero() {
-        return numero;
+    @Override
+    public void pagar(float deposito){ 
+            this.setSaldo(getSaldo()+deposito-deposito*0.03f);
     }
 
-    /**
-     * @param numero the numero to set
-     */
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-    
 }

@@ -9,20 +9,13 @@ package Herencia;
  *
  * @author xaviiorichi
  */
-public class TarjetaNomina {
-   private  int numero;
+public class TarjetaNomina extends Tarjeta {
 
-    /**
-     * @return este atributo regresa el valor de tu tarjeta
-     */
-    public int getNumero() {
-        return numero;
+    @Override
+    public void pagar(float deposito) {
+        this.setSaldo(getSaldo()+deposito);
+        
+        
+    }
     }
 
-    /**
-     * @param numero aqui debes de introduccior el valor de tu tarjeta
-     */
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-}

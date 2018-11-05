@@ -9,7 +9,12 @@ package Herencia;
  *
  * @author xaviiorichi
  */
-public class TarjetaAhorro {
-   private int numero;
+public class TarjetaAhorro extends Tarjeta{
+
+    @Override
+    public void pagar(float deposito) {
+        this.setSaldo(getSaldo()+deposito+deposito*0.05f);
+    }
+  
  
 }
